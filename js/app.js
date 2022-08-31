@@ -165,14 +165,14 @@ function cotizarSeguro(e) {
 
     if( marca === '' ) {
         ui.mostrarMensaje('Todos los campos son obligatorios', 'error');
-    } else {
+        return;
+    } 
         ui.mostrarMensaje('Cotizando...', 'exito');
-
         // Ocultar las cotizaciones previas
         const resultados = document.querySelector('#resultado div');
         if (resultados != null) {
             resultados.remove();
-        }
+        
     }
 
     // Instanciar el seguro
